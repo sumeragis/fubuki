@@ -36,11 +36,13 @@ PDCAサイクル全体のオーケストレーションを担う。
 4. 両結果が揃ってから planner にコンテンツ企画を依頼
 
 ### Do（実行）
-5. planner の企画を writer に渡して複数案を執筆させる
-6. 複数案をユーザーに提示し、選定してもらう
-7. 選ばれた案を `/content-review` スキルで品質チェック（省略しない）
+5. planner の企画を writer に渡して**最低5案**を執筆させる
+6. 案の選定方法はコンテキストに従う:
+   - ユーザーが起動した場合（`/post` 等）→ 複数案をユーザーに提示し、選定してもらう
+   - 自動実行の場合（`/generate-daily` 等）→ `/content-review` に全案を渡して自動選定
+7. 選定案を `/content-review` スキルで品質チェック（省略しない）
 8. pass した投稿を X API で即時投稿し、`data/posts/` にログ保存する
-9. engagement に交流アクション案を作成させる
+9. engagement に交流アクション案を作成させ、`data/engagement/` に保存する
 
 ### Check（評価）
 10. `operations.metrics_collect_at` のタイミング（24h/48h/7d）で monitor を起動する
@@ -50,9 +52,9 @@ PDCAサイクル全体のオーケストレーションを担う。
 14. `data/eval/baseline.json` を最新実績で更新
 
 ### Act（改善）
-13. evaluator の `recommendations_for_optimizer` を確認
-14. confidence: high → optimizer に即渡し、confidence: medium → 自分で採否を判断
-15. optimizer がナレッジ・プロンプトを更新しバージョン記録
+15. evaluator の `recommendations_for_optimizer` を確認
+16. confidence: high → optimizer に即渡し、confidence: medium → 自分で採否を判断
+17. optimizer がナレッジ・プロンプトを更新しバージョン記録
 
 ## 判断基準
 

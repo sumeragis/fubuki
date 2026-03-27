@@ -50,15 +50,26 @@ tools: Read, Glob, Grep, WebSearch, WebFetch
 アクションの種類は `knowledge/engagement.md` を参照する。
 プラットフォームの仕様変更で新しいアクションが増えた場合は knowledge を更新すること。
 
+結果は `data/engagement/YYYY-MM-DD_HHmmss.json` に保存する（evaluator が評価するため）。
+
 ```json
 {
+  "created_at": "ISO8601",
   "actions": [
     {
       "type": "アクション種別（knowledge/engagement.md 参照）",
       "target_url": "",
       "content": "本文（リプライ・引用RTの場合）",
-      "intent": "目的と期待効果"
+      "intent": "目的と期待効果",
+      "executed_at": null,
+      "result": null
     }
   ]
 }
 ```
+
+## evaluator との連携
+
+- `executed_at` と `result` は実行後に更新する（monitor が収集）
+- evaluator はこのファイルを参照してエンゲージメントアクションの効果を評価する
+- 効果が高いアクションパターンは optimizer が `knowledge/engagement.md` に反映する
