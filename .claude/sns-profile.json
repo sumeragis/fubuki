@@ -22,8 +22,8 @@
     "best_times": ["7:00", "12:00", "19:00", "22:00"],
     "thread_ratio": 0.3,
     "image_ratio": 0.2,
-    "mode": "scheduled",
-    "auto_post": false
+    "mode": "immediate",
+    "auto_post": true
   },
   "operations": {
     "analysis_interval": "daily",

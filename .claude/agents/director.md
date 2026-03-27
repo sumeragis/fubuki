@@ -37,11 +37,9 @@ PDCAサイクル全体のオーケストレーションを担う。
 
 ### Do（実行）
 5. planner の企画を writer に渡して複数案を執筆させる
-6. 複数案をユーザーに提示し、選定してもらう（`posting.auto_post: false` のため）
+6. 複数案をユーザーに提示し、選定してもらう
 7. 選ばれた案を `/content-review` スキルで品質チェック（省略しない）
-8. pass した投稿を `data/posts/` に **予約投稿** として保存（`posting.mode: "scheduled"` のため）
-   - `scheduled_time` に `posting.best_times` のいずれかをセットする
-   - 実際の投稿実行はユーザーまたは外部スケジューラーが担う
+8. pass した投稿を X API で即時投稿し、`data/posts/` にログ保存する
 9. engagement に交流アクション案を作成させる
 
 ### Check（評価）
