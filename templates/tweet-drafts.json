@@ -1,0 +1,51 @@
+{
+  "_template": "tweet drafts",
+  "_usage": "writer が複数案を出力するときのフォーマット。最低5案。選定後に content-review に渡す。",
+  "topic": "planner から受け取った投稿テーマ",
+  "content_pillar": "education | empathy | opinion | announcement",
+  "intent": "awareness | engagement | conversion",
+  "drafts": [
+    {
+      "id": 1,
+      "hook_type": "question",
+      "angle": "この切り口を選んだ理由",
+      "content": "投稿本文",
+      "hashtags": [],
+      "estimated_engagement": "high | medium | low"
+    },
+    {
+      "id": 2,
+      "hook_type": "surprise",
+      "angle": "この切り口を選んだ理由",
+      "content": "投稿本文",
+      "hashtags": [],
+      "estimated_engagement": "high | medium | low"
+    },
+    {
+      "id": 3,
+      "hook_type": "empathy",
+      "angle": "この切り口を選んだ理由",
+      "content": "投稿本文",
+      "hashtags": [],
+      "estimated_engagement": "high | medium | low"
+    },
+    {
+      "id": 4,
+      "hook_type": "number",
+      "angle": "この切り口を選んだ理由",
+      "content": "投稿本文",
+      "hashtags": [],
+      "estimated_engagement": "high | medium | low"
+    },
+    {
+      "id": 5,
+      "hook_type": "paradox",
+      "angle": "この切り口を選んだ理由",
+      "content": "投稿本文",
+      "hashtags": [],
+      "estimated_engagement": "high | medium | low"
+    }
+  ],
+  "writer_recommendation": "最もエンゲージメントが高いと判断した案のIDと理由",
+  "selected_id": null
+}

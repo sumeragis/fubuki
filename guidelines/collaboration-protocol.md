@@ -26,7 +26,7 @@ directorは独立したタスクを複数エージェントに同時に振る。
   monitor（過去データ）──┘
 
 [Do]
-  planner → writer → /content-review → data/posts/ → engagement
+  planner → writer（複数案生成）→ 選定（director or ユーザー）→ /content-review → data/posts/ → engagement
 
 [Check]
   monitor（メトリクス収集）→ evaluator（成果評価）→ data/eval/reports/
@@ -53,7 +53,8 @@ directorは独立したタスクを複数エージェントに同時に振る。
 |--------|-----------|---------|
 | analyst | planner | analyst出力JSON |
 | planner | writer | `templates/content-plan.json` 形式のJSON |
-| writer | content-review | `templates/tweet.json` or `templates/thread.json` 形式のJSON |
+| writer | director/ユーザー | `templates/tweet-drafts.json` or `templates/thread-drafts.json`（複数案） |
+| director/ユーザー | content-review | 選定済みの1案（`selected_id` に番号を入れて渡す） |
 | monitor | evaluator | メトリクスJSONのファイルパス |
 | evaluator | optimizer | 評価レポートのファイルパス |
 | optimizer | director | 変更サマリー |
