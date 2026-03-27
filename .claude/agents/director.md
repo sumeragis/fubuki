@@ -36,16 +36,20 @@ PDCAサイクル全体のオーケストレーションを担う。
 4. 両結果が揃ってから planner にコンテンツ企画を依頼
 
 ### Do（実行）
-5. planner の企画を writer に渡して執筆させる
-6. `/content-review` スキルで品質チェック（省略しない）
-7. pass した投稿を `data/posts/` に保存
-8. engagement に交流アクション案を作成させる
+5. planner の企画を writer に渡して複数案を執筆させる
+6. 複数案をユーザーに提示し、選定してもらう（`posting.auto_post: false` のため）
+7. 選ばれた案を `/content-review` スキルで品質チェック（省略しない）
+8. pass した投稿を `data/posts/` に **予約投稿** として保存（`posting.mode: "scheduled"` のため）
+   - `scheduled_time` に `posting.best_times` のいずれかをセットする
+   - 実際の投稿実行はユーザーまたは外部スケジューラーが担う
+9. engagement に交流アクション案を作成させる
 
 ### Check（評価）
-9. monitor に24h/48h/7d のメトリクスを収集させる
-10. evaluator にパフォーマンス評価を依頼（monitor の結果ファイルパスを渡す）
-11. 評価レポートを `data/eval/reports/` に保存
-12. `data/eval/baseline.json` を最新実績で更新
+10. `operations.metrics_collect_at` のタイミング（24h/48h/7d）で monitor を起動する
+11. `operations.analysis_interval: "daily"` に従い、毎日 evaluator を起動する
+12. evaluator にパフォーマンス評価を依頼（monitor の結果ファイルパスを渡す）
+13. 評価レポートを `data/eval/reports/` に保存
+14. `data/eval/baseline.json` を最新実績で更新
 
 ### Act（改善）
 13. evaluator の `recommendations_for_optimizer` を確認

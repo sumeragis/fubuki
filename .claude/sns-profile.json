@@ -21,7 +21,14 @@
     "frequency_per_day": 3,
     "best_times": ["7:00", "12:00", "19:00", "22:00"],
     "thread_ratio": 0.3,
-    "image_ratio": 0.2
+    "image_ratio": 0.2,
+    "mode": "scheduled",
+    "auto_post": false
+  },
+  "operations": {
+    "analysis_interval": "daily",
+    "metrics_collect_at": ["24h", "48h", "7d"],
+    "analyst_interval_days": 7
   },
   "api": {
     "tier": "free",

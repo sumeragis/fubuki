@@ -25,7 +25,9 @@ tools: Read, Write, Glob, Grep, Bash, WebSearch, WebFetch
 
 ## 収集タイミング
 
-- 投稿後24時間・48時間・7日の3タイミング
+`sns-profile.json` の `operations` セクションに従う:
+- 収集タイミング: `operations.metrics_collect_at`（デフォルト: 24h / 48h / 7d）
+- 分析頻度: `operations.analysis_interval`（デフォルト: daily）
 - director または自動トリガーから起動される
 
 ## 作業手順
