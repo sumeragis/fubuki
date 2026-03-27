@@ -1,13 +1,14 @@
 {
   "_template": "thread drafts",
   "_usage": "writer がスレッドの複数案を出力するときのフォーマット。最低3案。選定後に content-review に渡す。",
+  "_note": "hook_type / content_pillar の選択肢は knowledge/writer.md と knowledge/planner.md を参照",
   "topic": "planner から受け取った投稿テーマ",
-  "content_pillar": "education | empathy | opinion | announcement",
-  "intent": "awareness | engagement | conversion",
+  "content_pillar": "",
+  "intent": "",
   "drafts": [
     {
       "id": 1,
-      "hook_type": "question",
+      "hook_type": "",
       "angle": "この切り口を選んだ理由",
       "tweets": [
         { "index": 1, "role": "hook", "content": "" },
@@ -15,11 +16,11 @@
         { "index": 3, "role": "cta", "content": "" }
       ],
       "hashtags": [],
-      "estimated_engagement": "high | medium | low"
+      "estimated_engagement": ""
     },
     {
       "id": 2,
-      "hook_type": "story",
+      "hook_type": "",
       "angle": "この切り口を選んだ理由",
       "tweets": [
         { "index": 1, "role": "hook", "content": "" },
@@ -27,11 +28,11 @@
         { "index": 3, "role": "cta", "content": "" }
       ],
       "hashtags": [],
-      "estimated_engagement": "high | medium | low"
+      "estimated_engagement": ""
     },
     {
       "id": 3,
-      "hook_type": "number",
+      "hook_type": "",
       "angle": "この切り口を選んだ理由",
       "tweets": [
         { "index": 1, "role": "hook", "content": "" },
@@ -39,7 +40,7 @@
         { "index": 3, "role": "cta", "content": "" }
       ],
       "hashtags": [],
-      "estimated_engagement": "high | medium | low"
+      "estimated_engagement": ""
     }
   ],
   "writer_recommendation": "最もエンゲージメントが高いと判断した案のIDと理由",
