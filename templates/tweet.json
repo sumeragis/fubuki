@@ -1,0 +1,12 @@
+{
+  "_template": "single tweet",
+  "_usage": "writer が単発ツイートを出力するときのフォーマット",
+  "type": "tweet",
+  "content": "",
+  "hashtags": [],
+  "hook_type": "question | surprise | empathy | number | paradox | story",
+  "content_pillar": "education | empathy | opinion | announcement",
+  "intent": "awareness | engagement | conversion",
+  "estimated_engagement": "high | medium | low",
+  "notes": "執筆意図・工夫した点のメモ"
+}

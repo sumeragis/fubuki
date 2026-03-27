@@ -1,0 +1,28 @@
+{
+  "_template": "content plan",
+  "_usage": "planner が週次コンテンツ計画を出力するときのフォーマット",
+  "date": "YYYY-MM-DD",
+  "period": "YYYY-MM-DD ~ YYYY-MM-DD",
+  "generated_by": "planner",
+  "trend_reference": "参照したトレンド情報の要約",
+  "posts": [
+    {
+      "scheduled_time": "HH:MM",
+      "type": "tweet | thread",
+      "topic": "投稿テーマ",
+      "hook": "フック案（1行目のドラフト）",
+      "content_pillar": "education | empathy | opinion | announcement",
+      "intent": "awareness | engagement | conversion",
+      "hashtags": [],
+      "trend_tie_in": "関連するトレンドがあれば記載（なければnull）",
+      "priority": "high | medium | low"
+    }
+  ],
+  "pillar_ratio": {
+    "education": 0,
+    "empathy": 0,
+    "opinion": 0,
+    "announcement": 0
+  },
+  "notes": "企画全体のコメント・補足"
+}

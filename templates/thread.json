@@ -1,0 +1,28 @@
+{
+  "_template": "thread",
+  "_usage": "writer がスレッド投稿を出力するときのフォーマット",
+  "type": "thread",
+  "tweets": [
+    {
+      "index": 1,
+      "role": "hook",
+      "content": "1行目で読者を止める。スレッドの全体像を示唆する。"
+    },
+    {
+      "index": 2,
+      "role": "body",
+      "content": "本論。情報・体験・主張を展開する。"
+    },
+    {
+      "index": 3,
+      "role": "cta",
+      "content": "締め。学びのまとめ or 次のアクションへの誘導。"
+    }
+  ],
+  "hashtags": [],
+  "hook_type": "question | surprise | empathy | number | paradox | story",
+  "content_pillar": "education | empathy | opinion | announcement",
+  "intent": "awareness | engagement | conversion",
+  "estimated_engagement": "high | medium | low",
+  "notes": "執筆意図・工夫した点のメモ"
+}

@@ -1,0 +1,48 @@
+{
+  "_template": "evaluation report",
+  "_usage": "evaluator が評価レポートを出力するときのフォーマット。data/eval/reports/YYYY-MM-DD.json として保存する",
+  "evaluated_at": "ISO8601",
+  "period": "YYYY-MM-DD ~ YYYY-MM-DD",
+  "post_count": 0,
+  "baseline_comparison": {
+    "impressions_vs_baseline": "+0%",
+    "engagement_rate_vs_baseline": "+0%",
+    "follower_delta": 0
+  },
+  "top_posts": [
+    {
+      "post_id": "投稿ファイル名",
+      "hook_type": "フックの型",
+      "content_pillar": "ピラー",
+      "metrics": {
+        "impressions": 0,
+        "engagement_rate": 0.0
+      },
+      "why_it_worked": "成功仮説"
+    }
+  ],
+  "success_patterns": [
+    {
+      "pattern": "パターンの説明",
+      "evidence": ["根拠となる投稿ID"],
+      "confidence": "high | medium | low"
+    }
+  ],
+  "failure_patterns": [
+    {
+      "pattern": "パターンの説明",
+      "evidence": ["根拠となる投稿ID"],
+      "confidence": "high | medium | low"
+    }
+  ],
+  "prompt_quality_alert": false,
+  "prompt_quality_alert_reason": "劣化検知の根拠（alertがfalseならnull）",
+  "recommendations_for_optimizer": [
+    {
+      "target": "knowledge/writer.md | knowledge/planner.md | sns-profile.json",
+      "action": "add | modify | remove",
+      "detail": "具体的な変更提案",
+      "confidence": "high | medium | low"
+    }
+  ]
+}
