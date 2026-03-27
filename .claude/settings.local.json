@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p D:/repo/sumeragis/fubuki/data/posts D:/repo/sumeragis/fubuki/data/campaigns D:/repo/sumeragis/fubuki/data/reports)",
+      "Bash(touch D:/repo/sumeragis/fubuki/data/posts/.gitkeep D:/repo/sumeragis/fubuki/data/campaigns/.gitkeep D:/repo/sumeragis/fubuki/data/reports/.gitkeep)",
+      "Bash(mkdir -p D:/repo/sumeragis/fubuki/.claude/skills/content-review D:/repo/sumeragis/fubuki/.claude/skills/trend-research)",
+      "Bash(rm -f D:/repo/sumeragis/fubuki/.claude/skills/content-review.md D:/repo/sumeragis/fubuki/.claude/skills/trend-research.md)",
+      "Bash(mkdir -p D:/repo/sumeragis/fubuki/data/metrics D:/repo/sumeragis/fubuki/data/eval/reports D:/repo/sumeragis/fubuki/data/prompt-versions)",
+      "Bash(touch D:/repo/sumeragis/fubuki/data/metrics/.gitkeep D:/repo/sumeragis/fubuki/data/eval/reports/.gitkeep D:/repo/sumeragis/fubuki/data/prompt-versions/.gitkeep)",
+      "WebSearch"
+    ]
+  }
+}

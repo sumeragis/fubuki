@@ -1,0 +1,30 @@
+{
+  "account": {
+    "platform": "x",
+    "id": "1nichitaisetsu",
+    "type": "anonymous_theme"
+  },
+  "persona": {
+    "tone": "",
+    "character": "",
+    "first_person": "",
+    "prohibited_topics": [],
+    "prohibited_expressions": []
+  },
+  "content": {
+    "genres": [],
+    "target_audience": "",
+    "language": "ja",
+    "hashtag_strategy": ""
+  },
+  "posting": {
+    "frequency_per_day": 3,
+    "best_times": ["7:00", "12:00", "19:00", "22:00"],
+    "thread_ratio": 0.3,
+    "image_ratio": 0.2
+  },
+  "api": {
+    "tier": "free",
+    "monthly_post_limit": 1500
+  }
+}

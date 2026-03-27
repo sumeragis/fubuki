@@ -1,0 +1,48 @@
+{
+  "version": "v001",
+  "updated_at": "",
+  "description": "パフォーマンス評価の基準値。optimizerが改善サイクルごとに更新する。",
+  "thresholds": {
+    "engagement_rate": {
+      "good": 0.03,
+      "average": 0.015,
+      "poor": 0.005,
+      "unit": "ratio"
+    },
+    "impressions_per_post": {
+      "good": 1000,
+      "average": 300,
+      "poor": 100,
+      "unit": "count"
+    },
+    "follower_growth_per_week": {
+      "good": 50,
+      "average": 15,
+      "poor": 5,
+      "unit": "count"
+    }
+  },
+  "content_benchmarks": {
+    "tweet": {
+      "avg_engagement_rate": 0,
+      "avg_impressions": 0,
+      "sample_size": 0
+    },
+    "thread": {
+      "avg_engagement_rate": 0,
+      "avg_impressions": 0,
+      "sample_size": 0
+    },
+    "quote_rt": {
+      "avg_engagement_rate": 0,
+      "avg_impressions": 0,
+      "sample_size": 0
+    }
+  },
+  "time_benchmarks": {
+    "07:00": { "avg_engagement_rate": 0, "sample_size": 0 },
+    "12:00": { "avg_engagement_rate": 0, "sample_size": 0 },
+    "19:00": { "avg_engagement_rate": 0, "sample_size": 0 },
+    "22:00": { "avg_engagement_rate": 0, "sample_size": 0 }
+  }
+}
