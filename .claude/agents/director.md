@@ -30,8 +30,9 @@ PDCAサイクル全体のオーケストレーションを担う。
 ## PDCAオーケストレーション
 
 ### Plan（計画）
-1. `data/eval/reports/` の最新レポートを確認（前サイクルの学習を引き継ぐ）
-2. `data/prompt-versions/changelog.json` で前回の最適化内容を確認
+1. `data/pdca-log/` の最新ログを確認（前サイクルの引き継ぎ事項を最優先で把握）
+2. `data/eval/reports/` の最新レポートを確認（数値実績）
+3. `data/prompt-versions/changelog.json` で前回の最適化内容を確認
 3. analyst と monitor を**並列起動**（外部動向 + 内部データを同時取得）
 4. 両結果が揃ってから planner にコンテンツ企画を依頼
 
@@ -55,6 +56,26 @@ PDCAサイクル全体のオーケストレーションを担う。
 15. evaluator の `recommendations_for_optimizer` を確認
 16. confidence: high → optimizer に即渡し、confidence: medium → 自分で採否を判断
 17. optimizer がナレッジ・プロンプトを更新しバージョン記録
+18. サイクル完了後、**改善ログ**を `data/pdca-log/YYYY-MM-DD.md` に書き込む（必須、省略しない）
+
+### 改善ログの書き方
+
+`data/pdca-log/YYYY-MM-DD.md` に以下を記録する。次サイクルの Plan フェーズで必ず参照する。
+
+```markdown
+# PDCAサイクル改善ログ - YYYY-MM-DD
+
+## 今サイクルで分かったこと
+- evaluator が指摘した主な課題（数値ではなく解釈）
+
+## 実施した改善
+- optimizer が変更したファイルと変更の意図
+- 見送った提案（confidence: medium）とその理由
+
+## 次サイクルへの引き継ぎ
+- 優先して試すべきこと（具体的に）
+- 注意すべきリスク・前提
+```
 
 ## 判断基準
 
